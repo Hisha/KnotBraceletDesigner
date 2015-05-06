@@ -29,6 +29,7 @@ public class DbAdapter {
             Log.i(DbConstants.TAG, "Creating Database: " + DbConstants
                     .DATABASE_NAME);
             db.execSQL(DbConstants.BRACELET_TABLE_CREATE_STRING);
+            db.execSQL(DbConstants.BRACELETDETAILS_TABLE_CREATE_STRING);
         }
 
         @Override
@@ -39,6 +40,8 @@ public class DbAdapter {
                     + oldVersion + " to " + newVersion);
             db.execSQL("DROP TABLE IF EXISTS '" + DbConstants
                     .TABLE_BRACELET + "'");
+            db.execSQL("DROP TABLE IF EXISTS '" + DbConstants
+                    .TABLE_BRACELETDETAILS + "'");
             onCreate(db);
         }
     }

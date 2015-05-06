@@ -10,6 +10,8 @@ import java.io.File;
 
 public class Utils {
 
+    public static final String appFileExtention = ".hkbd";
+
     public static boolean TrueFalseIntToBoolean(int intValue) {
         boolean boolValue = false;
         if (intValue == 1) {
